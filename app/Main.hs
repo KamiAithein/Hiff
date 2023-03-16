@@ -73,8 +73,8 @@ data Action a   = ADD a Int
                 | REMOVE a Int
 
 instance Show a => Show (Action a) where
-    show (ADD    s at) = "+@ " ++ show at ++ " " ++ show s
-    show (REMOVE s at) = "-@ " ++ show at ++ " " ++ show s 
+    show (ADD    s at) = "+ " ++ show at ++ " " ++ show s
+    show (REMOVE s at) = "- " ++ show at ++ " " ++ show s 
 
 
 pathFromLev :: (Eq a) => [a] -> [a] -> Array (Int, Int) Int -> [Action a]
